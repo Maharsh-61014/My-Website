@@ -1,0 +1,217 @@
+body {
+    color:#40514E;
+    margin: 0;
+    text-align: center;
+    font-family: 'Montserrat', serif;
+}
+
+/*When we change width explicitly than text-align won't work as it's applied in whole block so we can 
+center such selectors by adding margin;*/
+/*→ If there are two arguments than one is for top & bottom and other is for right and left that goes clock wise.*/
+/*→ If there are three arguments than 1st id for top 2nd is for right&left and third is for bottom.*/
+h1 {
+    margin: 50px auto 0 auto;
+    /*margin:0  auto 0 auto; margin: top right bottom left in this case top bottom margin we made zero
+    and right,left margin will set itself accordingly to the display to make element center*/
+    font-family: 'Sacramento', cursive;
+    font-size: 562.5%;
+    color: #66BFBF ;
+    /* line-height: 2; */
+}
+/* font-size inherits suppose we have body having 2em and h1 5.68em it will take 2+5.68 em and can become gigantic 
+in case of % or em because it's dynamic so use static px so we can use or rem in css3*/
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #66BFBF ;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-family: 'Pacifico', cursive;
+    color:#11999E
+}
+hr
+{
+    border:dotted lightgray 6px;
+    border-bottom: none;
+    width:4%;
+    margin:100px auto;
+}
+a:hover
+{
+    color:#EAF6F6;
+}
+.Top-container {
+    background-color: #E4F9F5;
+    position: relative;
+    padding-top: 100px;
+}
+.middle-container
+{
+    margin: 100px 0px;
+}
+.Myphoto
+{
+    height: 20%;
+    width:20%;
+}
+.Skills
+{
+    width: 25%;
+    float:left;
+    margin: auto;
+}
+.img2
+{
+    float:right;
+    margin-left: 30px;
+}
+.skill-row
+{
+    width:50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+.p
+{
+    line-height: 2;
+}
+.intro
+{
+    font-size: 100%;
+    width:30%;
+    margin: auto;
+    /*max-width: 60%;
+    text-align:justify;
+    text-justify: inter-character;
+    padding-left: 300px;*/
+    font-weight: bold;
+}
+.pro {
+    text-decoration: underline;
+}
+.bottom-cloud {
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+}
+
+.top-cloud {
+    position: absolute;
+    right: 400px;
+    top: 30px;
+}
+.header
+{
+    padding-left:200px;
+}
+.program
+{
+    margin-left: 50px;
+    padding-left:180px;
+}
+.Ds
+{
+    margin-top: 200px;
+    /* clear:right; */ /*clear is kindof like anti float*/
+}
+.bottom-container
+{
+    background-color: #66BFBF;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.footer-link
+{
+    color:#11999E;  
+    display: inline-block;
+    height:200%;
+    text-decoration: none;
+}
+.one
+{
+ margin-right: 30px;
+}
+.two
+{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.three
+{
+    margin-left: 30px;
+}
+.copyright
+{
+    color:white;
+    margin-top:50px;
+    font-size: 0.75rem;
+}
+.btn
+{
+    background: #11999e;
+    background-image: -webkit-linear-gradient(top, #11999e, #2980b9);
+    background-image: -moz-linear-gradient(top, #11999e, #2980b9);
+    background-image: -ms-linear-gradient(top, #11999e, #2980b9);
+    background-image: -o-linear-gradient(top, #11999e, #2980b9);
+    background-image: linear-gradient(to bottom, #11999e, #2980b9);
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    font-family: 'Montserrat', serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+  
+.btn:hover 
+{
+    background: #de04d7;
+    background-image: -webkit-linear-gradient(top, #de04d7, #3498db);
+    background-image: -moz-linear-gradient(top, #de04d7, #3498db);
+    background-image: -ms-linear-gradient(top, #de04d7, #3498db);
+    background-image: -o-linear-gradient(top, #de04d7, #3498db);
+    background-image: linear-gradient(to bottom, #de04d7, #3498db);
+    text-decoration: none;
+}
+.Con-me
+{
+    margin-top:40px
+}
+/* p h1 are block elements that means it doesn't allow any other tag next to it or any element next to it
+whereas span is inline element so we can make it in same line but we lose our ability to change it's width
+Similarly we can make paragraph inline using display property. 
+display:inline;
+similarly we can change property of inline element to block elements i.e span to block using display.
+
+Now if we don't want our limitation to change width as inline elements will freeze changing width so we
+can use inline block as parameter in display i.e
+
+display:inline-block;
+now we have inline element and access to change width as well.
+also display:none; will remove element as if it doesn't exist
+also visibility:hidden; will hide it from access but leaves space as if it's still there 
+but can't be seen anymore. */
+
+/*POSITIONING can be done by
+position:static/relative/absolute/fixed
+→static is default by html relative is relative to that static positioning
+eg: img{position:relative; 
+        left:30px;}
+
+    Coordinates - Top Bottom left right i.e top will move image down by given pixel i.e leaving space at top
+    and down goes up left goes right and right goes left
+
+    Absolute positioning goes relative to it's parent element so will not leave space it will not remain in 
+    it's original position it changes other div according to parent
+
+    Fixed position will get fixed at that point even if we scroll down to our webpage just like 
+    some advertise in webpages comes we can scroll background or other content but it remains fixed and
+    can't be moved.
+
+    1em-16px,
+*/
